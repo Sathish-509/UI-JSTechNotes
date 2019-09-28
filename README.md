@@ -133,6 +133,93 @@ h1, h2, h3 {
    text-transform: lowercase;
 }
 
+Embedded CSS - The <style> Element
+  
+  <head>
+      <style type = "text/css" media = "all">
+         body {
+            background-color: linen;
+         }
+         h1 {
+            color: maroon;
+            margin-left: 40px;
+         }
+      </style>
+   </head> 
+   
+Inline CSS - The style Attribute
+You can use style attribute of any HTML element to define style rules. These rules will be applied to that element only. Here is the generic syntax −
+
+<element style = "...style rules....">
+  
+External CSS - The <link> Element
+  <head>
+   <link type = "text/css" href = "..." media = "..." />
+</head>
+
+Now you can include this file mystyle.css in any HTML document as follows −
+
+<head>
+   <link type = "text/css" href = "mystyle.css" media = " all" />
+</head>
+Imported CSS - @import Rule
+@import is used to import an external stylesheet in a manner similar to the <link> element. Here is the generic syntax of @import rule.
+
+<head>
+   <@import "URL";
+</head>
+  
+ <head>
+   <@import url("URL");
+</head>
+Example
+Following is the example showing you how to import a style sheet file into HTML document −
+
+<head>
+   @import "mystyle.css";
+</head>
+CSS Rules Overriding
+We have discussed four ways to include style sheet rules in a an HTML document. Here is the rule to override any Style Sheet Rule.
+Any inline style sheet takes highest priority. So, it will override any rule defined in <style>...</style> tags or rules defined in any external style sheet file.
+Any rule defined in <style>...</style> tags will override rules defined in any external style sheet file.
+Any rule defined in external style sheet file takes lowest priority, and rules defined in this file will be applied only when above two rules are not applicable.
+
+Handling old Browsers
+There are still many old browsers who do not support CSS. So, we should take care while writing our Embedded CSS in an HTML document. 
+
+<style type = "text/css">
+   <!--
+      body, td {
+         color: blue;
+      }
+   -->
+</style>
+CSS Comments
+ /*.....this is a comment in style sheet.....*/.
+ 
+ Unit	Description	Example
+%	Defines a measurement as a percentage relative to another value, typically an enclosing element.	p {font-size: 16pt; line-height: 125%;}
+cm	Defines a measurement in centimeters.	div {margin-bottom: 2cm;}
+em	A relative measurement for the height of a font in em spaces. Because an em unit is equivalent to the size of a given font, if you assign a font to 12pt, each "em" unit would be 12pt; thus, 2em would be 24pt.	p {letter-spacing: 7em;}
+ex	This value defines a measurement relative to a font's x-height. The x-height is determined by the height of the font's lowercase letter x.	p {font-size: 24pt; line-height: 3ex;}
+in	Defines a measurement in inches.	p {word-spacing: .15in;}
+mm	Defines a measurement in millimeters.	p {word-spacing: 15mm;}
+pc	Defines a measurement in picas. A pica is equivalent to 12 points; thus, there are 6 picas per inch.	p {font-size: 20pc;}
+pt	Defines a measurement in points. A point is defined as 1/72nd of an inch.	body {font-size: 18pt;}
+px	Defines a measurement in screen pixels.	p {padding: 25px;}
+
+You can specify your color values in various formats. Following table lists all the possible formats −
+
+Format	Syntax	Example
+Hex Code	#RRGGBB	p{color:#FF0000;}
+Short Hex Code	#RGB	p{color:#6A7;}
+RGB %	rgb(rrr%,ggg%,bbb%)	p{color:rgb(50%,50%,50%);}
+RGB Absolute	rgb(rrr,ggg,bbb)	p{color:rgb(0,0,255);}
+keyword	aqua, black, etc.	p{color:teal;}
+
+list of 216 colors which are supposed to be most safe and computer independent colors. These colors vary from hexa code 000000 to FFFFFF. These colors are safe to use because they ensure that all computers would display the colors correctly when running a 256 color palette 
+
+
 
 
 ## Node
