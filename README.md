@@ -125,6 +125,16 @@ p[lang|="en"] − Selects all paragraph elements whose lang attribute contains v
 Grouping Selectors
 You can apply a style to many selectors if you like. Just separate the selectors with a comma, as given in the following example −
 
+
+If you’re wanting to style occurrences of a certain class inside another class, you can write the following:
+.nav .nav-item { ... }
+The above targets any .nav-item inside .nav. If you only want those that are immediately inside the .nav as opposed to any level deep, you can add the > character, like so:
+
+.nav > .nav-item { ... }
+Want to target a button only if it’s next to another button? The + character has got you covered:
+
+.button + .button { ... }
+
 h1, h2, h3 {
    color: #36C;
    font-weight: normal;
@@ -219,6 +229,57 @@ keyword	aqua, black, etc.	p{color:teal;}
 
 list of 216 colors which are supposed to be most safe and computer independent colors. These colors vary from hexa code 000000 to FFFFFF. These colors are safe to use because they ensure that all computers would display the colors correctly when running a 256 color palette 
 
+Background:
+The background-color property is used to set the background color of an element.
+The background-image property is used to set the background image of an element.
+The background-repeat property is used to control the repetition of an image in the background.
+The background-position property is used to control the position of an image in the background.
+The background-attachment property is used to control the scrolling of an image in the background.
+The background property is used as a shorthand to specify a number of other background properties.
+
+Shorthand Property
+You can use the background property to set all the background properties at once. For example −
+<p style = "background:url(/images/pattern1.gif) repeat fixed;">
+   This parapgraph has fixed repeated background image.
+</p>
+
+Font:
+The font-family property is used to change the face of a font.
+The font-style property is used to make a font italic or oblique.
+The font-variant property is used to create a small-caps effect.
+The font-weight property is used to increase or decrease how bold or light a font appears.
+The font-size property is used to increase or decrease the size of a font.
+The font property is used as shorthand to specify a number of other font properties.
+
+Logical Tags:
+In HTML there are both logical tags and physical tags. Logical tags are designed to describe (to the browser) the enclosed text's meaning. An example of a logical tag is the <strong> </strong> tag. By placing text in between these tags you are telling the browser that the text has some greater importance. By default all browsers make the text appear bold when in between the <strong> and </strong> tags, but the point to take away from this is that the strong tag implies that importance of that text. This has impact with search engines like Google who look for such tags to help figure out what the page is about.
+
+There are many logical tags and they include:
+
+<strong> : Strong - as above.
+<em> : emphasize - usually renders (made to look like by the browsers) as italic.
+<span> : a neutral inline container. - read about this distinction below.
+<div> : a neutral block element. - read about this distinction below.
+
+Logical tags, as mentioned above, have default ways in which browsers (like IE or Opera) render them. But it is understood that CSS should be used to give them their style, or in other words their 'look'.
+
+Physical Tags:
+Physical tags on the other hand provide specific instructions on how to display the text they enclose. Examples of physical tags include:
+
+<b> : Makes the text bold.
+<big> : Makes the text usually one size bigger than what's around it.
+<font> : Used to apply a font-face (like Arial or Helvetica) and font-color.
+<i> : Makes text italic.
+
+Physical tags are more straightforward; <i> makes the text italic, <b> makes text bold and <font> is used to set the font face and color for the text.
+  
+Block Level vs. Inline tags
+What is the point of 'inline' in the description of the tag categories?
+
+In HTML, tags are either 'inline' or block-level elements. Block-level elements exist in their own virtual 'box' and are always followed by a carriage return (like hitting the 'enter' key after typing in some text). Inline tags (elements) become a part of the 'flow' of text in which they are inserted and have no 'box' around them and don't have the carriage return either. An example of a block tag is a <p> tag (paragraph) and an example of an inline tag is the <b> (bold) tag.
+
+Pseudo class:
+The pseudo-class concept is introduced to permit selection based on information that lies outside of the document tree or that cannot be expressed using the other simple selectors.
 
 
 
