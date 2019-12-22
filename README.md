@@ -14,6 +14,9 @@ Going to have concepts of Styles(CSS3, BootStrap, LESS, SASS), Task Runners(Grun
   - [3. LESS](#3.-less)
 - [Node](#node)
 
+## Angular key notes:
+## React key notes:
+
 ## Styles Related Tech
 
 
