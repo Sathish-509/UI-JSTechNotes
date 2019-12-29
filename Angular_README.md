@@ -106,3 +106,8 @@ Copy relative path of node_modules/bootstrap/dist/css/bootstrap.css and paste it
 
 Creating a component:
 ng generate component SubServer
+
+DataBidning: Communication between component and template
+Two types of dataminding.
+1, String interpolation
+2, ngmodel
