@@ -95,3 +95,14 @@ app.component.html:
 <input type="text" name="fName" [(ngModel)]="name"/>
 <p>{{ name }}</p>
 
+Integrating with bootstrap:
+ npm i --save bootstrap
+Copy relative path of node_modules/bootstrap/dist/css/bootstrap.css and paste it in angular.json as below:
+            "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
+            ],
+
+
+Creating a component:
+ng generate component SubServer
