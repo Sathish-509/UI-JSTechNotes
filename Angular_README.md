@@ -111,3 +111,53 @@ DataBidning: Communication between component and template
 Two types of dataminding.
 1, String interpolation
 2, ngmodel
+
+[] -> property binding
+() -> event binding
+[()] -> Two waybinding
+
+Diectives:
+ng generate directive "directive name"
+Components
+Structual -> ngIf, ngFor
+Attribute -> ngStyle
+ngIf example:
+
+Component.ts:
+```
+  flag = true;
+  toggleFlag() {
+    this.flag = !this.flag;
+    return this.flag;
+  }
+```
+component.html:
+```<p *ngIf="flag; else elseblock">Flag is true</p>
+<ng-template #elseblock>
+    <p>Flag is false</p>
+</ng-template>
+```
+ngStyle:
+component.ts
+  ```getColor() {
+    if(this.flag) {
+      return "green";
+    } else{
+      return "red";
+    }
+  }
+```
+
+component.html
+```<h1 [ngStyle]="{color: getColor()}">Below is the example of ngif, which internally serves ngstyle</h1>
+<h2 [ngClass]="{white: flag}">This is example of ngclass</h2>
+<button (click)="toggleFlag()">Toggle Flag</button> 
+```
+ngFor:
+component.html:
+```
+<h3>Example of ngFor</h3>
+<input type="text" placeholder="name" [(ngModel)]="currentName"/>
+<button (click)="addStudent()">Add Student</button>
+<li *ngFor="let name of studentsList"> {{name}} </li> 
+```
