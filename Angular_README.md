@@ -161,3 +161,4 @@ component.html:
 <button (click)="addStudent()">Add Student</button>
 <li *ngFor="let name of studentsList"> {{name}} </li> 
 ```
+Auto Coding plugi: "emmet" available for vscode
