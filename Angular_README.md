@@ -271,3 +271,23 @@ in html:
 </div>
 ```
 https://www.positronx.io/creating-custom-directives-angular-7/
+
+Angular LifeCycleHooks:
+ngOnChanges()
+ngOnInit()
+ngDoCheck()
+ngAfterContentInit()
+ngAfterContentChecked()
+ngAfterViewInit()
+ngAfterViewChecked()
+ngOnDestroy()
+
+Pipe:
+```
+import { Pipe, PipeTransform } from '@angular/core';
+@Pipe({name: 'exponentialStrength'})
+export class ExponentialStrengthPipe implements PipeTransform {
+  transform(value: number, exponent?: number): number {
+    return Math.pow(value, isNaN(exponent) ? 1 : exponent);
+  }
+}```
