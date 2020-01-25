@@ -7,6 +7,9 @@
 * Flexbox & Grid
 * Animations & Transitions
 
+Applying CSS: inline, internal, External.
+`<link rel="stylesheet" href="style.css">`
+
 CSS Advantages:
 * Saves Time -> write once and reuse
 * Pages load faster -> write rule for a tag, it will be applicable across
@@ -58,9 +61,11 @@ Above rule renders the content in black for every element with id attribute as b
 }`
 Above rule renders the content in black for only `<h1>` elements
 
-```#black h2 {
+```
+#black h2 {
   color: #000000;
-}```
+}
+```
 Above rule, all the level 2 headings will be displayed in black color when those headings will lie with in tags 
 having id attribute set to black.
 
@@ -71,7 +76,7 @@ Child Selectors: Similar to descendant selectors but different functionality.
 Above rule renders all the paragraphs in black if they are direct child of `<body>` element. Other paragraphs put inside the other 
 elements 
 
-Attribute Selectors: The style rule below will match all the input elements having a type attribute with a value of text −
+Attribute Selectors: The style rule below will match all the input elements having a type attribute with a value of text
 `input[type = "text"] {
    color: #000000; 
 }`
@@ -141,3 +146,13 @@ h2 ~ p {
 Adjacent selectors: using the Adjacent sibling selector, you can limit this to only include the first element which comes
 directly after the first element in themarkup.
 
+
+# Font Size:
+1 em: is the unit for the calculated size of a font. So “2em”, for example, is two times the current font size.
+2 rem: rem unit (standing for "root em"), it provides a way to specify lengths as fractions of the root element’s font size
+Ref: https://css-tricks.com/theres-more-to-the-css-rem-unit-than-font-sizing/
+3 pt: is the unit for points, for measurements typically in printed media.
+4 px: is the unit for pixels.
+5 % : is the unit for percentages.
+Other units include pc (picas), cm (centimeters), mm (millimeters) and in (inches).
+When a value is zero, you do not need to state a unit. For example, if you wanted to specify no border, it would be border: 0.
