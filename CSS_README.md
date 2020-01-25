@@ -1,18 +1,17 @@
-CSS
-Selectors & Properties
-Advanced Selectors
-Colors & Formatting
-Fonts & Text Manipulation
-Layout Positioning
-Flexbox & Grid
-Animations & Transitions
+##### CSS
+* Selectors & Properties
+* Advanced Selectors
+* Colors & Formatting
+* Fonts & Text Manipulation
+* Layout Positioning
+* Flexbox & Grid
+* Animations & Transitions
 
 CSS Advantages:
-
--> Saves Time -> write once and reuse
--> Pages load faster -> write rule for a tag, it will be applicable across
--> Easy maintenance -> Making global changes easy
--> Multiple device compatibility-> supports multi device
+* Saves Time -> write once and reuse
+* Pages load faster -> write rule for a tag, it will be applicable across
+* Easy maintenance -> Making global changes easy
+* Multiple device compatibility-> supports multi device
 
 Selectors:
 selector: HTML tag
@@ -49,33 +48,33 @@ h1.black {
 Above rule set to black only for h1 elements having class attribute as black.
 
 Id Selectors: Define rules based on id attribue of elements.
-#black {
+`#black {
   color: #000000;
-}
+}`
 Above rule renders the content in black for every element with id attribute as black.
 
-h1#black {
+`h1#black {
   color: #000000;
-}
+}`
 Above rule renders the content in black for only <h1> elements
 
-#black h2 {
+`#black h2 {
   color: #000000;
-}
+}`
 Above rule, all the level 2 headeings will be displayed in black color when those headings will lie with in tags 
 having id attribute set to black.
 
 Child Selectors: Similar to descendant selectors but different functionality.
-body > p {
+`body > p {
   color: #000000;
-}
+}`
 Above rule renders all the paragraphs in black if they are direct child of <body> element. Other paragraphs put inside the other 
 elements 
 
 Attribute Selectors: The style rule below will match all the input elements having a type attribute with a value of text −
-input[type = "text"] {
+`input[type = "text"] {
    color: #000000; 
-}
+}`
 The advantage to this method is that the <input type = "submit" /> element is unaffected,
 More attribute selectors ->
 p[lang] − Selects all paragraph elements with a lang attribute.
@@ -108,13 +107,13 @@ li:only-child {
   color: purple;
 }
 
-<a href="http://www.google.com" id="google-link">Google</a>
+`<a href="http://www.google.com" id="google-link">Google</a>
 #google-link:link {
   color: blue;
 }
 #google-link:visited {
   color: red;
-}
+}`
 
 Sibling Selectors:  a tilde character (~) and then the selector you wish to target, you can target elements by requiring the
 presence of another element within the same parent element. 
