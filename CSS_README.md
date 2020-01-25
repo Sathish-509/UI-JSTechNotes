@@ -48,21 +48,19 @@ Above rule set to black for every element with class attribute set to.
 Above rule set to black only for h1 elements having class attribute as black.
 
 Id Selectors: Define rules based on id attribue of elements.
-`
-#black {
+`#black {
   color: #000000;
-}
-`
+}`
 Above rule renders the content in black for every element with id attribute as black.
 
 `h1#black {
   color: #000000;
 }`
-Above rule renders the content in black for only <h1> elements
+Above rule renders the content in black for only `<h1>` elements
 
-`#black h2 {
+```#black h2 {
   color: #000000;
-}`
+}```
 Above rule, all the level 2 headings will be displayed in black color when those headings will lie with in tags 
 having id attribute set to black.
 
@@ -77,21 +75,23 @@ Attribute Selectors: The style rule below will match all the input elements havi
 `input[type = "text"] {
    color: #000000; 
 }`
-The advantage to this method is that the <input type = "submit" /> element is unaffected,
-More attribute selectors ->
+The advantage to this method is that the `<input type = "submit" />` element is unaffected,
+More attribute selectors 
+```
 p[lang] − Selects all paragraph elements with a lang attribute.
 p[lang="fr"] − Selects all paragraph elements whose lang attribute has a value of exactly "fr".
 p[lang~="fr"] − Selects all paragraph elements whose lang attribute contains the word "fr".
 p[lang|="en"] − Selects all paragraph elements whose lang attribute contains values that are exactly "en", or begin with "en-".
-
+```
 Specificity:
 Element selectors are less powerful than class selectors.
 Class selectors are less powerful than id selectors.
 inline styles are powerful than id selectors.
 
-Universal selectors(*) < Element selectors < class selectors < id selectors < inline styles
+Universal selectors(`*`) `< Element selectors < class selectors < id selectors < inline styles`
 
 Psuedo Selectors:
+```
 h1:hover { 
   color: red;
 }
@@ -108,7 +108,7 @@ li:nth-child(2) {
 li:only-child {
   color: purple;
 }
-
+```
 `<a href="http://www.google.com" id="google-link">Google</a>
 #google-link:link {
   color: blue;
@@ -120,13 +120,13 @@ li:only-child {
 Sibling Selectors:  a tilde character (~) and then the selector you wish to target, you can target 
 by requiring the
 presence of another element within the same parent element. 
-~ -> with in the same parent
+`~ -> with in the same parent
 <style type="text/css">
 h2 ~ p {
 	font-style: italic;
 }
-</style>
-
+</style>`
+`
 <div id="content">
 	<h1>Hello, world!</h1>
 	<p>Some text here</p>
@@ -137,7 +137,7 @@ h2 ~ p {
 		<p>More text here</p> // it will not impact with the above selector, since this p is not direct sibling
 	</div>
 </div>
-
+`
 Adjacent selectors: using the Adjacent sibling selector, you can limit this to only include the first element which comes
 directly after the first element in themarkup.
 
