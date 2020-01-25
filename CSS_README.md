@@ -48,9 +48,11 @@ h1.black {
 Above rule set to black only for h1 elements having class attribute as black.
 
 Id Selectors: Define rules based on id attribue of elements.
-`#black {
+```
+#black {
   color: #000000;
-}`
+}
+```
 Above rule renders the content in black for every element with id attribute as black.
 
 `h1#black {
