@@ -21,38 +21,38 @@ selector {property: value }
 Ex: table { border : 1px solid #C00; }
 
 Element or Type selectors: 
-p {
+`p {
   color: red; 
-}
+}`
 
 Universal Selector: matches the name of any element type -
-* {
+`* {
   color: #000000;
-}
+}`
 
 Descendant Selectors: Apply styles to particular element only, when it lies inside a particular element.
-Ex: ul em {
+`Ex: ul em {
   color: #000000;
-}
-As above rule, style rule will apply to all <em> element only when it lies inside <ul> tag.
+}`
+As above rule, style rule will apply to all `<em>` element only when it lies inside `<ul>` tag.
 
 Class selectors: based on class attribute of the elements.
-.black {
+`.black {
   color: #000000;
-}
+}`
 Above rule set to black for every element with class attribute set to.
 
-h1.black {
+`h1.black {
   color: #000000;
-}
+}`
 Above rule set to black only for h1 elements having class attribute as black.
 
 Id Selectors: Define rules based on id attribue of elements.
-```
+`
 #black {
   color: #000000;
 }
-```
+`
 Above rule renders the content in black for every element with id attribute as black.
 
 `h1#black {
@@ -63,14 +63,14 @@ Above rule renders the content in black for only <h1> elements
 `#black h2 {
   color: #000000;
 }`
-Above rule, all the level 2 headeings will be displayed in black color when those headings will lie with in tags 
+Above rule, all the level 2 headings will be displayed in black color when those headings will lie with in tags 
 having id attribute set to black.
 
 Child Selectors: Similar to descendant selectors but different functionality.
 `body > p {
   color: #000000;
 }`
-Above rule renders all the paragraphs in black if they are direct child of <body> element. Other paragraphs put inside the other 
+Above rule renders all the paragraphs in black if they are direct child of `<body>` element. Other paragraphs put inside the other 
 elements 
 
 Attribute Selectors: The style rule below will match all the input elements having a type attribute with a value of text −
@@ -117,7 +117,8 @@ li:only-child {
   color: red;
 }`
 
-Sibling Selectors:  a tilde character (~) and then the selector you wish to target, you can target elements by requiring the
+Sibling Selectors:  a tilde character (~) and then the selector you wish to target, you can target 
+by requiring the
 presence of another element within the same parent element. 
 ~ -> with in the same parent
 <style type="text/css">
